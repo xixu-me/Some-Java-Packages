@@ -1,7 +1,5 @@
 package school;
 
-import library.Administrator;
-
 public class Test {
     public static void main(String[] args) {
         ManagementSys sys = ManagementSys.getInstance();

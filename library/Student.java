@@ -1,3 +1,5 @@
+package library;
+
 public class Student {
     private int iId;
     private String strName;

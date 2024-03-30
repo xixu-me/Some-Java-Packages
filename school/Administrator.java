@@ -1,3 +1,5 @@
+package school;
+
 public class Administrator extends Person {
     private String adminID;
 

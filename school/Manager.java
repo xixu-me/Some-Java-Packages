@@ -1,3 +1,5 @@
+package school;
+
 public class Manager extends Person {
     private static Manager instance = null;
 

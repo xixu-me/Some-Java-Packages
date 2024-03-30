@@ -1,3 +1,5 @@
+package shopping;
+
 public class Test {
     public static void main(String[] args) {
         Customer cs = new Customer("zhang", 2000);

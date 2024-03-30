@@ -1,3 +1,5 @@
+package shopping;
+
 public class Good {
     private String strName;
     private float fPrice;

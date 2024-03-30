@@ -1,3 +1,5 @@
+package library;
+
 public class Administrator {
     private int iId;
     private String strName;

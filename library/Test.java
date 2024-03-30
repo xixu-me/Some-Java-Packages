@@ -1,3 +1,5 @@
+package library;
+
 public class Test {
     public static void main(String[] args) {
         Administrator adm = new Administrator(1, "John");

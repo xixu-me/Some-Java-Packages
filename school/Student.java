@@ -1,3 +1,5 @@
+package school;
+
 public class Student extends Person {
     private String studentID;
 

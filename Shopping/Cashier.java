@@ -1,3 +1,5 @@
+package shopping;
+
 public class Cashier {
     private String strName;
     private float fMoney;

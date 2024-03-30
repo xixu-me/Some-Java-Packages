@@ -8,12 +8,12 @@ public final class QuadraticEquationSolver {
     private double c;
     private double x[];
 
-    public QuadraticEquationSolver(double a, double b, double c) {
+    public QuadraticEquationSolver(double a, double b, double c) throws Exception {
         if (a == 0)
-            throw new IllegalArgumentException("The coefficient of the quadratic term cannot be zero.");
+            throw new Exception("The coefficient of the quadratic term cannot be zero.");
         double discriminant = b * b - 4 * a * c;
         if (discriminant < 0)
-            throw new IllegalArgumentException("The quadratic equation has no real roots.");
+            throw new Exception("The quadratic equation has no real roots.");
         this.a = a;
         this.b = b;
         this.c = c;
@@ -54,7 +54,7 @@ public final class QuadraticEquationSolver {
         try {
             QuadraticEquationSolver solver = new QuadraticEquationSolver(a, b, c);
             System.out.println("x = " + solver.getX()[0] + ", " + solver.getX()[1] + ".");
-        } catch (IllegalArgumentException e) {
+        } catch (Exception e) {
             System.err.println(e);
         }
     }

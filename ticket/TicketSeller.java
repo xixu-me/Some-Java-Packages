@@ -44,13 +44,50 @@ public class TicketSeller implements Runnable {
                     }
                     break;
                 case 50:
-                    if (ten > 0 && five > 0) {
-                        ten--;
+                    if (twenty > 1 && five > 0) {
+                        twenty -= 2;
                         five--;
                         fifty++;
                         success = true;
-                    } else if (five >= 3) {
+                    } else if (ten > 1 && twenty > 0 && five > 0) {
+                        ten -= 2;
+                        twenty--;
+                        five--;
+                        fifty++;
+                        success = true;
+                    } else if (ten > 3 && five > 0) {
+                        ten -= 4;
+                        five--;
+                        fifty++;
+                        success = true;
+                    } else if (twenty > 0 && ten > 0 && five > 2) {
+                        twenty--;
+                        ten--;
                         five -= 3;
+                        fifty++;
+                        success = true;
+                    } else if (ten > 2 && five > 2) {
+                        ten -= 3;
+                        five -= 3;
+                        fifty++;
+                        success = true;
+                    } else if (twenty > 0 && five > 4) {
+                        twenty--;
+                        five -= 4;
+                        fifty++;
+                        success = true;
+                    } else if (ten > 1 && five > 4) {
+                        ten -= 2;
+                        five -= 4;
+                        fifty++;
+                        success = true;
+                    } else if (ten > 0 && five > 6) {
+                        ten--;
+                        five -= 6;
+                        fifty++;
+                        success = true;
+                    } else if (five > 9) {
+                        five -= 10;
                         fifty++;
                         success = true;
                     }
@@ -70,5 +107,45 @@ public class TicketSeller implements Runnable {
                 notifyAll();
             }
         }
+    }
+
+    public int getFive() {
+        return five;
+    }
+
+    public void setFive(int five) {
+        this.five = five;
+    }
+
+    public int getTen() {
+        return ten;
+    }
+
+    public void setTen(int ten) {
+        this.ten = ten;
+    }
+
+    public int getTwenty() {
+        return twenty;
+    }
+
+    public void setTwenty(int twenty) {
+        this.twenty = twenty;
+    }
+
+    public int getFifty() {
+        return fifty;
+    }
+
+    public void setFifty(int fifty) {
+        this.fifty = fifty;
+    }
+
+    public int getHundred() {
+        return hundred;
+    }
+
+    public void setHundred(int hundred) {
+        this.hundred = hundred;
     }
 }

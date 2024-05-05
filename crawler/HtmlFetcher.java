@@ -12,6 +12,7 @@ public class HtmlFetcher {
         StringBuilder htmlContent = new StringBuilder();
         HttpURLConnection connection = null;
         try {
+            @SuppressWarnings("deprecation")
             URL url = new URL(urlString);
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");

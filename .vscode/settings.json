@@ -1,7 +1,6 @@
 {
+    "java.project.explorer.showNonJavaResources": false,
     "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "excel/jxl.jar"
-    ],
-    "java.project.explorer.showNonJavaResources": false
+        "lib/**/*.jar"
+    ]
 }

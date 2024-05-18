@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=1&courseID=40&assignID=1339&libCenter=false -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+    <meta http-equiv="Expires" content="0"> 
+    <meta http-equiv="Cache-Control" content="no-cache"> 
+    <meta http-equiv="Pragma" content="no-cache"> 
+    <link rel="shortcut icon" href="https://coder.wtu.edu.cn/images/cgicon.png">
+
+    <title>CourseGrading</title>
+    <script language="javascript">   
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+                history.pushState(null, null, document.URL);
+        });
+    </script>
+    <!-- Bootstrap core CSS -->
+    <link href="./CourseGrading_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./CourseGrading_files/docs.min.css" rel="stylesheet">    
+    
+   
+    <link href="./CourseGrading_files/all.css" rel="stylesheet">
+    <link href="./CourseGrading_files/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="./CourseGrading_files/cg_sv2.css" rel="stylesheet">
+    
+    <script src="./CourseGrading_files/jquery-3.5.1.min.js.download"></script>
+    <script src="./CourseGrading_files/popper.min.js.download"></script>
+    
+    <script src="./CourseGrading_files/bootstrap.bundle.min.js.download"></script>
+    <script src="./CourseGrading_files/docs.min.js.download"></script>
+
+    <link href="./CourseGrading_files/bootstrap-select.min.css" rel="stylesheet">
+    <script src="./CourseGrading_files/bootstrap-select.min.js.download"></script>
+  <style type="text/css">#_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.enable_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.enable_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.enable_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.enable_copy_btns_btn:hover{opacity:.8}.enable_copy_btns_btn:active{opacity:1}</style><style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2147483647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.immersive-translate-loading-spinner {
+  vertical-align: middle !important;
+  width: 10px !important;
+  height: 10px !important;
+  display: inline-block !important;
+  margin: 0 4px !important;
+  border: 2px rgba(221, 244, 255, 0.6) solid !important;
+  border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+  animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+}
+
+@-webkit-keyframes immersive-translate-loading-animation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes immersive-translate-loading-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.immersive-translate-input-loading {
+  --loading-color: #f78fb6;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+  position: relative;
+  color: white;
+  left: -100px;
+  box-sizing: border-box;
+  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+}
+
+@keyframes immersiveTranslateShadowRolling {
+  0% {
+    box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  12% {
+    box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  25% {
+    box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  36% {
+    box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color);
+  }
+
+  62% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color);
+  }
+
+  75% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color);
+  }
+
+  87% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+  }
+
+  100% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+  }
+}
+
+
+.immersive-translate-search-recomend {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  font-size: 16px;
+}
+
+.immersive-translate-search-enhancement-en-title {
+  color: #4d5156;
+}
+
+/* dark */
+@media (prefers-color-scheme: dark) {
+  .immersive-translate-search-recomend {
+    border: 1px solid #3c4043;
+  }
+
+  .immersive-translate-close-action svg {
+    fill: #bdc1c6;
+  }
+
+  .immersive-translate-search-enhancement-en-title {
+    color: #bdc1c6;
+  }
+}
+
+
+.immersive-translate-search-settings {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.immersive-translate-search-recomend::before {
+  /* content: " "; */
+  /* width: 20px; */
+  /* height: 20px; */
+  /* top: 16px; */
+  /* position: absolute; */
+  /* background: center / contain url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEUAAADpTInqTIjpSofnSIfqS4nfS4XqS4nqTIjsTYnrTInqTIroS4jvQIDqTIn////+/v7rSYjpTIn8/v7uaZzrTIr9/f3wfansWJL88/b85e73qc39+/v3xNnylrvrVI/98fb62Obva5/8+fr76vH4y9zpSIj74e353Oj1ocTzm77xhK/veKbtYpjsXJTqU47oTInxjrXyh7L99fj40eH2ttH1udD3sc31ssz1rMnykLXucqPtbqD85e/1xdn2u9DzqcXrUY6FaJb8AAAADnRSTlMA34BgIM8Q37/fz7+/EGOHcVQAAAGhSURBVDjLhZPncuowEEZFTW7bXVU7xsYYTO/p7bb3f6lICIOYJOT4h7/VnFmvrBFjrF3/CR/SajBHswafctG0Qg3O8O0Xa8BZ6uw7eLjqr30SofCDVSkemMinfL1ecy20r5ygR5zz3ArcAqJExPTPKhDENEmS30Q9+yo4lEQkqVTiIEAHCT10xWERRdH0Bq0aCOPZNDV3s0xaYce1lHEoDHU8wEh3qRJypNcTAeKUIjgKMeGLDoRCLVLTVf+Ownj8Kk6H9HM6QXPgYjQSB0F00EJEu10ILQrs/QeP77BSSr0MzLOyuJJQbnUoOOIUI/A8EeJk9E4YUHUWiRyTVKGgQUB8/3e/NpdGlfI+FMQyWsCBWyz4A/ZyHXyiiz0Ne5aGZssoxRmcChw8/EFKQ5JwwkUo3FRT5yXS7q+Y/rHDZmFktzpGMvO+5QofA4FPpEmGw+EWRCFvnaof7Zhe8NuYSLR0xErKLThUSs8gnODh87ssy6438yzbLzxl012HS19vfCf3CNhnbWOL1eEsDda+gDPUvri8tSZzNFrwIZf1NmNvqC1I/t8j7nYAAAAASUVORK5CYII='); */
+}
+
+.immersive-translate-search-title {}
+
+.immersive-translate-search-title-wrapper {}
+
+.immersive-translate-search-time {
+  font-size: 12px;
+  margin: 4px 0 24px;
+  color: #70757a;
+}
+
+.immersive-translate-expand-items {
+  display: none;
+}
+
+.immersive-translate-search-more {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.immersive-translate-modal {
+  display: none;
+  position: fixed;
+  z-index: 2147483647;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+
+.immersive-translate-modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 40px 24px 24px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 270px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  position: relative
+}
+
+.immersive-translate-modal .immersive-translate-modal-content-in-input {
+  max-width: 500px;
+}
+.immersive-translate-modal-content-in-input .immersive-translate-modal-body {
+  text-align: left;
+  max-height: unset;
+}
+
+.immersive-translate-modal-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.immersive-translate-modal-body {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  word-break: break-all;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .immersive-translate-modal-body {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+}
+
+.immersive-translate-close {
+  color: #666666;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.immersive-translate-close:hover,
+.immersive-translate-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.immersive-translate-modal-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.immersive-translate-btn {
+  width: fit-content;
+  color: #fff;
+  background-color: #ea4c89;
+  border: none;
+  font-size: 16px;
+  margin: 0 8px;
+  padding: 9px 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.immersive-translate-btn:hover {
+  background-color: #f082ac;
+}
+
+.immersive-translate-cancel-btn {
+  /* gray color */
+  background-color: rgb(89, 107, 120);
+}
+
+
+.immersive-translate-cancel-btn:hover {
+  background-color: hsl(205, 20%, 32%);
+}
+
+.immersive-translate-action-btn {
+  background-color: transparent;
+  color: #EA4C89;
+  border: 1px solid #EA4C89
+}
+
+.immersive-translate-btn svg {
+  margin-right: 5px;
+}
+
+.immersive-translate-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #007bff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-primary-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #ea4c89;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-modal input[type="radio"] {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.immersive-translate-modal label {
+  cursor: pointer;
+}
+
+.immersive-translate-close-action {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer;
+}</style></head>
+
+<body inmaintabuse="1">
+
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark get-navbar-height" id="cgclientNAV">
+    
+    <a class="navbar-brand" href="https://coder.wtu.edu.cn/index.jsp"> <img src="./CourseGrading_files/logo.png" border="0" height="25"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item font-weight-bold active">
+                <a class="nav-link" href="https://coder.wtu.edu.cn/includes/redirect.jsp?tab=0">首页 <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item active">
+                <a class="nav-link" href="https://coder.wtu.edu.cn/includes/redirect.jsp?tab=-1">课程信息</a>
+            </li>
+            
+            
+            
+            <li class="nav-item active">
+                <a class="nav-link" href="https://coder.wtu.edu.cn/includes/redirect.jsp?tab=-2">在线作业</a>
+            </li>
+            
+            
+            
+            <li class="nav-item active">
+                <a class="nav-link" href="https://coder.wtu.edu.cn/includes/redirect.jsp?tab=-3">在线考试</a>
+            </li>  
+            
+            
+                
+            
+            
+            <li class="nav-item active">
+                <a class="nav-link" href="https://coder.wtu.edu.cn/includes/redirect.jsp?tab=-4">在线答疑</a>
+            </li>    
+            
+            
+                      
+
+                     
+            
+                                   
+
+        </ul>
+       
+        <form class="form-inline my-2 my-lg-0" name="courseForm" method="post" action="https://coder.wtu.edu.cn/main.jsp">
+            
+            
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=1&amp;courseID=40&amp;assignID=1339&amp;libCenter=false#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <i class="fas fa-user"></i> 杨崇新
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="userDropdown">
+                      <a class="dropdown-item" href="https://coder.wtu.edu.cn/includes/redirect.jsp?tab=-6"><i class="far fa-user"></i> 个人信息</a>
+                    <a class="dropdown-item" href="https://coder.wtu.edu.cn/login/loginproc.jsp?logout=true"><i class="fas fa-sign-out-alt"></i> 退出登录</a>
+
+                    </div>
+                </li>
+                <!--
+                <li class="nav-item active">
+                    <a class="nav-link" href="help.jsp" target="_blank"><i class="fas fa-question-circle"></i> 帮助</a>
+                </li>
+                -->
+            </ul>
+            <label for="doChangeCourse" class="sr-only">切换课程</label>
+
+            <input type="hidden" name="doChangeCourse" value="true">
+            <select class="form-control" name="changeCourse" onchange="document.courseForm.submit()">
+              
+              <option value="21">C语言程序设计</option>
+              
+              <option value="34">Java程序设计</option>
+              
+              <option value="40" selected="">Java应用开发</option>
+                    
+            </select>
+            
+            
+            <ul class="navbar-nav ml-3">
+                
+                <li class="nav-item dropdown active" id="moreSrvLI">
+                    <a class="nav-link dropdown-toggle" href="https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=1&amp;courseID=40&amp;assignID=1339&amp;libCenter=false#" id="moreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <i class="fas fa-layer-group"></i> 更多栏目
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="moreDropdown">
+                        
+                        <a class="dropdown-item" href="https://coder.wtu.edu.cn/sv2/indexexp/index.jsp"><i class="fas fa-diagnoses text-danger"></i> 实训首页</a>
+                        
+                        
+                        
+                        <a class="dropdown-item" href="https://coder.wtu.edu.cn/sv2/indexexp/contest/index.jsp?my=true&amp;contestCID=40"><i class="fas fa-medal text-danger"></i> 比赛</a>
+                        
+                        
+                        
+                        <a class="dropdown-item" href="https://coder.wtu.edu.cn/acm/index.jsp" target="_blank"><i class="fas fa-code text-danger"></i> OnlineJudge</a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="dropdown-item" href="https://coder.wtu.edu.cn/graduation/index.jsp"><i class="fa fa-user-graduate text-danger"></i> 毕业设计</a>  
+                        
+
+                        
+                        <a class="dropdown-item" href="https://coder.wtu.edu.cn/sv2/indexexp/pai/publicProjects.jsp"><i class="fas fa-microscope text-danger"></i> 算力平台</a>
+                        
+                    </div>
+                </li>
+                
+                
+                <li class="nav-item active"> <a class="nav-link" href="https://docs.educg.net/web/#/119?page_id=926" target="_blank"><i class="fas fa-question-circle"></i> 帮助</a></li>
+            </ul>
+            
+            
+            
+        </form>
+  </div>
+</nav>
+  
+
+
+
+
+
+<script language="JavaScript" src="./CourseGrading_files/common.js.download"></script>
+<script language="JavaScript" src="./CourseGrading_files/judgeutils.js.download"></script>
+<div class="container-fluid" id="cgcontainerID" style="min-height:622px">
+    <div class="row mr-2 ml-1 mt-3">
+        
+        <div class="col-2">
+           
+
+
+
+
+            <h5 class="d-flex justify-content-between align-items-center">
+                <span class="text-muted"><strong><i class="far fa-clock"></i> 当前作业</strong></span>
+                
+            </h5>
+            <div class="list-group list-group-flush mb-4">
+                
+                
+                  
+                        <a href="https://coder.wtu.edu.cn/assignment/index.jsp?courseID=40&amp;assignID=1345" class="list-group-item list-group-item-action">
+                            <i class="fas fa-angle-double-right"></i> 2024年Java期末模拟测试
+                            
+                        </a>
+                            
+                        
+                  
+                  
+                        <a href="https://coder.wtu.edu.cn/assignment/index.jsp?courseID=40&amp;assignID=1339" class="list-group-item list-group-item-action active">
+                            <i class="fas fa-angle-double-right"></i> java作业
+                            
+                        </a>
+                            
+                        
+                  
+            </div>
+
+
+            <h5 class="d-flex justify-content-between align-items-center">
+                <span class="text-muted"><strong><i class="fas fa-history"></i> 历史作业</strong></span>                
+            </h5>
+            <div class="list-group list-group-flush">
+                
+                
+            </div>
+            
+      
+              
+        </div>
+        <div class="col-10">
+              
+          
+     
+            
+       
+            
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination flex-wrap">
+                        
+                        <li class="page-item"><a class="page-link" href="https://coder.wtu.edu.cn/assignment/index.jsp?assignID=1339#An_Program">
+                                <i class="fas fa-arrow-alt-circle-left"></i> 返回编程题列表</a>
+                        </li>
+                        
+
+                      
+                       
+                        <li class="page-item active"><a class="page-link" href="https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=1&amp;courseID=40&amp;assignID=1339&amp;libCenter=false">1</a></li>
+
+                       
+                        <li class="page-item"><a class="page-link" href="https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=2&amp;courseID=40&amp;assignID=1339&amp;libCenter=false">2</a></li>
+
+                       
+                        <li class="page-item"><a class="page-link" href="https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=3&amp;courseID=40&amp;assignID=1339&amp;libCenter=false">3</a></li>
+
+                       
+
+                      
+                        <li class="page-item">
+                          <a class="page-link" href="https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=2&amp;courseID=40&amp;assignID=1339&amp;libCenter=false" aria-label="Next" title="下一道">
+                            <span aria-hidden="true">&#187;</span>
+                          </a>
+                        </li>
+                      
+                      
+                      
+                    </ul>
+                </nav>
+                   
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="https://coder.wtu.edu.cn/assignment/index.jsp?assignID=1339">java作业</a></li>
+                      <li class="breadcrumb-item"><a href="https://coder.wtu.edu.cn/assignment/index.jsp?assignID=1339#An_Program">编程题</a></li>
+                      <li class="breadcrumb-item active" aria-current="page"><b>1.</b> 用户登录</li>
+                    </ol>
+                </nav>
+               
+                <p>MySQL数据库xiaoshou表结构如下：</p><p>1.t_yong用户表</p><p>yonghuming：用户名</p><p>mima：密码（存放密码对应md5编码值）</p><p>xingming：姓名</p><p>juese：角色（管理员，收银员）</p><p>2.t_shouyinmingxi收银明细表</p><p>liushuihao：流水号（格式为yyyyMMdd****，如2023年5月18日第一笔收银流水号为2023050180001）</p><p>tiaoma：商品条码（6位数字）</p><p>mingcheng：商品名称</p><p>danjia：商品单价</p><p>shuliang：销售数量</p><p>shouyinyuan：收银员（系统当前登录用户对应的姓名）</p><p>xiaoshoushijian：销售时间（系统当前时间）</p><p>3.t_shangping商品表</p><p>tiaoma：商品条码（主键，唯一）</p><p>mingcheng：商品名称</p><p>danjia：商品单价</p><p>gongyingshang：供应商</p><p><br></p><p>实现用户登陆的功能</p><p>当程序运行时，显示“欢迎使用阳光超市收银系统，请登陆”，提示用户依次输入用户名及其密码，当用户名及密码不正确时，显示提示信息“用户名或密码不正确，请重新输入”，用户最多可以尝试3次，若输入3次均不正确，则给出提示信息“最多只能尝试3次”，退出系统；</p><p>用户名及密码正确时，显示</p><p>欢迎使用阳光超市收银系统</p><p><br></p><p>当前收银员：*****（显示当前用户名对应的姓名），当前时间：2023年05月18日9时12分10秒（显示系统当前时间）</p><p style="line-height: 16px;"><br></p><p style="line-height: 16px;">附：数据库连接地址字符串</p><p>jdbc:mysql://localhost:3306/xiaoshou?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=GMT</p><p style="line-height: 16px;"><img style="vertical-align: middle; margin-right: 2px;" src="./CourseGrading_files/icon_rar.gif"><a style="font-size:12px; color:#0066cc;" href="https://coder.wtu.edu.cn/userfiles/file/2023/1684116627878032085.zip" title="所需资源文件.zip">所需资源文件.zip</a></p><p><br></p>    
+           
+                <hr>
+               
+						
+                
+
+                <script type="text/javascript" language="javascript">
+                var datenow = new Date();
+                var submitStartTime = datenow.getTime();
+
+                function filesubmit() {	
+
+                        var boolSelected=false;
+                        var sValue="";
+                        var mainClass="";
+                        var appendUrl="";
+                        var uAction="";
+                        var programLan="java";
+
+                        var filename = document.upload.FILE1.value;
+
+                        if(filename.length<1) {
+                                alert("请输入要提交的文件!");
+                                return false;
+                        }   
+
+                        
+
+                            var maxFileSize = 8388608;
+                            var uploadFileObj = document.getElementById("CGFILE").files[0];
+
+                            if(uploadFileObj.size > maxFileSize) {
+                                alert("上传的源文件大小不能超过 8192 KB !" );
+                                return false;
+                            }
+                       
+
+                        document.upload.action = "showProcessMsg.jsp?problemID=9578&assignID=1339&doSubmit=true&progLanguage=java";
+
+                        
+                            mainClass=document.lanparamFORM.javaMainCLass.value;
+                            if(mainClass == "") {
+                                alert("请填写主类名");
+                                return false;
+                            }
+
+                            document.upload.action="showProcessMsg.jsp?problemID=9578&assignID=1339&doSubmit=true&progLanguage=java&javaMainCLass=" + mainClass;
+                        
+
+
+                        
+
+                        var fileExtentRegxs = new Array();
+                        
+                        fileExtentRegxs['nasm-64-libc']=['.asm'];
+                        
+                        fileExtentRegxs['shell']=['.sh','.bash','.pl','.rb'];
+                        
+                        fileExtentRegxs['nasm-64']=['.asm'];
+                        
+                        fileExtentRegxs['nasm-32-libc']=['.asm'];
+                        
+                        fileExtentRegxs['scala']=['.scala'];
+                        
+                        fileExtentRegxs['python']=['.py','.zip','.rar'];
+                        
+                        fileExtentRegxs['ise']=['.zip','.v'];
+                        
+                        fileExtentRegxs['mpicxx']=['.cpp','.cc','.C','.cxx','.zip','.rar'];
+                        
+                        fileExtentRegxs['fortran95']=['.f','.for','.FOR','.F','.fpp','.FPP','.zip','.rar'];
+                        
+                        fileExtentRegxs['clang']=['.c','.zip','.rar'];
+                        
+                        fileExtentRegxs['matlab']=['.m'];
+                        
+                        fileExtentRegxs['fortran77']=['.f','.for','.FOR','.F','.fpp','.FPP','.zip','.rar'];
+                        
+                        fileExtentRegxs['clang++']=['.cpp','.cc','.C','.cxx','.CPP','.zip','.rar'];
+                        
+                        fileExtentRegxs['gas-32']=['.S'];
+                        
+                        fileExtentRegxs['gnuPascal']=['.pas','.zip','.rar'];
+                        
+                        fileExtentRegxs['c']=['.c','.zip','.rar'];
+                        
+                        fileExtentRegxs['freePascal']=['.pas','.pp','.zip','.rar'];
+                        
+                        fileExtentRegxs['mars']=['.asm'];
+                        
+                        fileExtentRegxs['r']=['.R'];
+                        
+                        fileExtentRegxs['logisim']=['.circ'];
+                        
+                        fileExtentRegxs['c++']=['.cpp','.cc','.C','.cxx','.CPP','.zip','.rar'];
+                        
+                        fileExtentRegxs['java']=['.java','.zip','.rar'];
+                        
+                        fileExtentRegxs['c#']=['.cs','.zip','.rar'];
+                        
+                        fileExtentRegxs['gas-64']=['.S'];
+                        
+                        fileExtentRegxs['mpicc']=['.c','.zip','.rar'];
+                        
+                        fileExtentRegxs['nasm-32']=['.asm'];
+                        
+                        fileExtentRegxs['go']=['.go'];
+                    
+
+                        var fileExtents = new Array();
+                        
+                        fileExtents['nasm-64-libc']=".asm";
+                        
+                        fileExtents['shell']=".sh， .bash， .pl， .rb";
+                        
+                        fileExtents['nasm-64']=".asm";
+                        
+                        fileExtents['yaml']=".yaml";
+                        
+                        fileExtents['nasm-32-libc']=".asm";
+                        
+                        fileExtents['scala']=".scala";
+                        
+                        fileExtents['python']=".py";
+                        
+                        fileExtents['ise']=".zip， .v";
+                        
+                        fileExtents['mpicxx']=".cpp， .cc， .C， .cxx";
+                        
+                        fileExtents['fortran95']=".f， .for， .FOR， .F， .fpp， .FPP";
+                        
+                        fileExtents['clang']=".c";
+                        
+                        fileExtents['matlab']=".m";
+                        
+                        fileExtents['fortran77']=".f， .for， .FOR， .F， .fpp， .FPP";
+                        
+                        fileExtents['clang++']=".cpp， .cc， .C， .cxx， .CPP";
+                        
+                        fileExtents['gas-32']=".S";
+                        
+                        fileExtents['gnuPascal']=".pas";
+                        
+                        fileExtents['c']=".c";
+                        
+                        fileExtents['freePascal']=".pas， .pp";
+                        
+                        fileExtents['git']=".gitproj";
+                        
+                        fileExtents['mars']=".asm";
+                        
+                        fileExtents['r']=".R";
+                        
+                        fileExtents['logisim']=".circ";
+                        
+                        fileExtents['c++']=".cpp， .cc， .C， .cxx， .CPP";
+                        
+                        fileExtents['gitlab']=".zip";
+                        
+                        fileExtents['java']=".java";
+                        
+                        fileExtents['c#']=".cs";
+                        
+                        fileExtents['gas-64']=".S";
+                        
+                        fileExtents['mpicc']=".c";
+                        
+                        fileExtents['nasm-32']=".asm";
+                        
+                        fileExtents['go']=".go";
+                    
+
+                        if(!CGHasExtension(filename, fileExtentRegxs[programLan])) {
+                            alert("文件格式不对，源文件后缀仅限于：" + fileExtents[programLan]);
+                            return false;
+                        }   
+
+                        var now = new Date();       
+                        var submitTimeSpent = Math.floor((now.getTime() - submitStartTime) / 1000);        
+                        submitStartTime = now.getTime();
+                        var requestString = document.upload.action;               
+                        document.upload.action = requestString + "&wtime=" + submitTimeSpent;   
+
+                        document.getElementById("Submit").disabled=true;
+                        document.getElementById("Submit").value="正在处理...";
+
+                        cgShowProcessLoading('showmessageFrame');
+                        return true;
+                }
+
+                function mainClassInput() {
+                    var sValue="";
+                    for (var i=0; i<document.lanparamFORM.progLanguage.options.length; ++i){
+                                    if (document.lanparamFORM.progLanguage.options[i].selected){
+                                    sValue=document.lanparamFORM.progLanguage.options[i].text;
+                                    break;
+                            }
+                    }
+
+                    if(sValue=="java"){
+                            document.getElementById('mainclassObj').style.display='inline';
+                    }else{
+                            document.getElementById('mainclassObj').style.display='none';
+                    }
+                }
+                </script>
+						
+                <form class="form-inline mb-3" name="lanparamFORM" method="get">
+                   
+                        
+
+                           
+                        <div style="display:inline;" id="mainclassObj">  
+                            <div class="input-group ml-2">
+                                
+                                <input type="text" class="form-control" id="javamanclass" placeholder="填写主类名" name="javaMainCLass" value="until.SignIn">
+                                <div class="input-group-append">
+                                  <div class="input-group-text">如果带有包名，格式为：<kbd>包名.主类名</kbd> <a href="https://coder.wtu.edu.cn/help/javamainclass.jsp" class="ml-1" target="_blank">查看帮助</a></div>
+                                </div>                           
+                            </div>
+                        </div>                              
+               
+                </form>   
+                                
+                <form class="form-inline" name="upload" onsubmit="return filesubmit();" method="post" enctype="multipart/form-data" target="showmessage" action="https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=1&amp;courseID=40&amp;assignID=1339&amp;libCenter=false">
+                     <div class="form-group">
+                         <label for="CGFILE" class="my-1 mr-3">提交源文件</label>
+                         <input type="file" name="FILE1" id="CGFILE" required="">
+                         <input id="Submit" type="submit" name="Submit" class="btn btn-success btn-sm" value="提 交">     
+                     </div>   
+                </form>
+                 <small id="emailHelp" class="form-text text-muted">                        
+                    
+                        注意: 只能用 JAVA 语言编写程序。
+                    
+                    如果有多个源文件，压缩成 <code>rar 或者 zip </code>包提交。                     
+                 </small>           
+                            
+                <div class="card">
+                    <div class="card-header">
+                      运行结果
+                    </div>
+                    <div class="card-body">
+                        
+                        <iframe id="showmessageFrame" name="showmessage" src="./CourseGrading_files/showProcessMsg.html" frameborder="0" height="350" marginheight="0" marginwidth="0" width="100%"></iframe>
+                    </div>
+                </div>     
+                   
+                    
+                    
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination flex-wrap">
+                        
+                        <li class="page-item"><a class="page-link" href="https://coder.wtu.edu.cn/assignment/index.jsp?assignID=1339#An_Program">
+                                <i class="fas fa-arrow-alt-circle-left"></i> 返回编程题列表</a>
+                        </li>
+                        
+
+                      
+                       
+                        <li class="page-item active"><a class="page-link" href="https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=1&amp;courseID=40&amp;assignID=1339&amp;libCenter=false">1</a></li>
+
+                       
+                        <li class="page-item"><a class="page-link" href="https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=2&amp;courseID=40&amp;assignID=1339&amp;libCenter=false">2</a></li>
+
+                       
+                        <li class="page-item"><a class="page-link" href="https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=3&amp;courseID=40&amp;assignID=1339&amp;libCenter=false">3</a></li>
+
+                       
+
+                      
+                        <li class="page-item">
+                          <a class="page-link" href="https://coder.wtu.edu.cn/assignment/programList.jsp?proNum=2&amp;courseID=40&amp;assignID=1339&amp;libCenter=false" aria-label="Next" title="下一道">
+                            <span aria-hidden="true">&#187;</span>
+                          </a>
+                        </li>
+                      
+                    </ul>
+                </nav>
+                    
+                
+<link href="./CourseGrading_files/style.css" rel="stylesheet">
+
+<div class="medaltg">
+
+    <div id="medalmask" class="medalmask"></div>
+    <!--处理中间通关显示-->
+    <div class="medalbox" id="medalbox">
+      <!----关闭遮罩的按钮-->
+      <div class="medalbtn" id="medalbtn" onclick="cgmaskLevel()"><svg t="1702261667414" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1472" width="32" height="32">
+          <path d="M512 1024C229.376 1024 0 794.624 0 512S229.376 0 512 0s512 229.376 512 512-229.376 512-512 512z m0-975.36C257.024 48.64 48.64 257.024 48.64 512c0 254.976 207.872 463.36 463.36 463.36S975.36 767.488 975.36 512 766.976 48.64 512 48.64z" fill="#ffffff" p-id="1473"></path>
+          <path d="M548.864 512l195.072-195.072c9.728-9.728 9.728-25.6 0-36.864l-1.536-1.536c-9.728-9.728-25.6-9.728-35.328 0L512 475.136 316.928 280.064c-9.728-9.728-25.6-9.728-35.328 0l-1.536 1.536c-9.728 9.728-9.728 25.6 0 36.864L475.136 512 280.064 707.072c-9.728 9.728-9.728 25.6 0 36.864l1.536 1.536c9.728 9.728 25.6 9.728 35.328 0L512 548.864l195.072 195.072c9.728 9.728 25.6 9.728 35.328 0l1.536-1.536c9.728-9.728 9.728-25.6 0-36.864L548.864 512z" fill="#ffffff" p-id="1474"></path>
+        </svg></div>
+      <div class="medalpic"></div>
+      <!--
+      <div id="medalnext" class="medalnext" onclick="cgnextLevel()">下一关</div>
+      -->
+    </div>
+</div>
+
+<script>
+    // 提交练习题并且闯关成功之后弹出遮罩,示例是暂时让其显示的，集成项目中之后这里需做处理
+    function cgshowLevelMedal() {
+        $('#medalmask').show();
+        $('#medalbox').show();
+    }    
+
+    //点击右上角关闭遮罩
+    function cgmaskLevel() {
+      $('#medalmask').hide();
+      $('#medalbox').hide();
+    }
+    // 如果是最后一关了，可改变按钮名称或者直接隐藏此按钮
+    // $('#next').text('完成');
+    // $('#next').hide();
+    // 点击下一关
+    function cgnextLevel() {
+      $('#medalmask').hide();
+      $('#medalbox').hide();
+      // 以下需要处理进入下一关的练习题
+    }
+
+</script>
+    
+<div class="modal fade" id="selfAnswerModal" tabindex="-1" role="dialog" aria-labelledby="selfAnswerLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="selfAnswerLabel"><i class="fas fa-info-circle"></i> 提示</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            <p>先查看参考答案，再提交通过，本关卡得分将扣除：<strong class="text-danger" id="checkAnswerPenalty"></strong>！</p>
+
+            <p class="font-weight-bold"> 您确认现在查看答案？</p>
+        </div>
+        <form class="modal-footer" method="post" action="https://coder.wtu.edu.cn/assignment/selfAnswer.jsp" name="confirmAnswerFORM" target="_blank" onsubmit="return confirmSelfAnswerSubmit()">
+            <input type="hidden" name="problemID" value="">
+            <input type="hidden" name="assignID" value="">
+            <input type="hidden" name="doViewAnswer" value="true">
+          
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+            <button type="submit" class="btn btn-primary">确定</button>
+        </form>  
+    </div>
+  </div>
+</div>
+<script>
+    function confirmViewAnswer(assignID, proID, penalty) {
+        document.confirmAnswerFORM.assignID.value=assignID;
+        document.confirmAnswerFORM.problemID.value=proID;
+        document.getElementById("checkAnswerPenalty").innerHTML=penalty + "%";
+        $("#selfAnswerModal").modal('show');
+    }
+    
+    function confirmSelfAnswerSubmit() {
+        $("#selfAnswerModal").modal('hide');
+    }
+</script>
+                  
+       
+
+            
+        </div>
+    </div>
+</div>
+
+
+        
+     
+   
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    <iframe src="./CourseGrading_files/stayalive.html" frameborder="0" height="0" marginheight="0" marginwidth="0" width="0"></iframe>
+    
+    <footer id="cgfooter" style="min-height: 70px; width: 100%; padding: 15px;position: relative;bottom: 0;" class="">
+      <div class="container text-center">
+       
+              CourseGrading
+      </div>
+    </footer>
+    <script>
+        $(document).ready(function(){            
+           cgfooterByResize();
+        });        
+        
+        $(window).resize(function (){           
+           cgfooterByResize();
+        });
+        function cgfooterByResize() {
+           
+            var cgclientNAVHeight = 60;
+            var cgclientNAV = document.getElementById('cgclientNAV');
+            if (typeof(cgclientNAV) != 'undefined' && cgclientNAV != null) {  
+                cgclientNAVHeight = document.getElementById('cgclientNAV').clientHeight;
+            }
+            
+            var cgcontainerID =  document.getElementById('cgcontainerID');
+            if (typeof(cgcontainerID) != 'undefined' && cgcontainerID != null) {                
+                var cgPageBodyHeight = document.getElementById('cgcontainerID').clientHeight;
+                var cgFooterHeight = document.getElementById('cgfooter').clientHeight;   
+                
+                var winMinHeight =  window.innerHeight - cgFooterHeight - cgclientNAVHeight;
+               
+                $("#cgcontainerID").attr('style', "min-height:" + winMinHeight + "px");
+                if(cgPageBodyHeight < winMinHeight){ 
+                    $("#cgfooter").css("position","fixed");                           
+                }else{
+                    $("#cgfooter").css("position","relative");          
+                }                
+            }    
+        }        
+    </script>
+    
+
+ 
+<script src="chrome-extension://nhiheekdcnmfbapkmpbhmplfddenhjic/sm.bundle.js" data-pname="supercopy-v3" data-asset-path="https://spc3.s3.ap-east-1.amazonaws.com"></script></body></html>

@@ -28,7 +28,6 @@ class Goods {
     public void setPrice(double price) {
         this.price = price;
     }
-
 }
 
 public class StatisticsOfProducts {
@@ -42,9 +41,8 @@ public class StatisticsOfProducts {
             goods[i] = new Goods(name, price);
             sum += price;
         }
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++)
             System.out.println(goods[i].toString());
-        }
         System.out.println("应付:" + sum);
     }
 }

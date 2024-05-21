@@ -1,3 +1,5 @@
+package finalexam.StandardIO;
+
 import java.util.Scanner;
 
 public class Main {

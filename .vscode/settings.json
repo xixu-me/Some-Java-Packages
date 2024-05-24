@@ -1,5 +1,8 @@
 {
-    "java.project.explorer.showNonJavaResources": false,
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
     ]

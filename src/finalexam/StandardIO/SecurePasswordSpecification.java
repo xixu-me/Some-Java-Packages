@@ -9,7 +9,7 @@ public class SecurePasswordSpecification {
         System.out.println(isSafePassword(s) ? "success" : "fail");
     }
 
-    private static boolean isSafePassword(String password) {
+    static boolean isSafePassword(String password) {
         if (password.length() < 6 || password.length() > 12)
             return false;
         boolean haveLower = false, hasUpper = false, haveDigit = false, hasWhitespace = false;

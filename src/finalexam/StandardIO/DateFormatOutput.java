@@ -15,22 +15,19 @@ public class DateFormatOutput {
         String yearStr = "";
         String monthStr = "";
         String dateStr = "";
-        for (int i = 0; i < arr[0].length(); i++) {
+        for (int i = 0; i < arr[0].length(); i++)
             yearStr += num[arr[0].charAt(i) - '0'];
-        }
         yearStr += "年";
-        if (month < 10) {
+        if (month < 10)
             monthStr = num[month] + "月";
-        } else {
+        else
             monthStr = "十" + num[month % 10] + "月";
-        }
-        if (date < 10) {
+        if (date < 10)
             dateStr = num[date] + "日";
-        } else if (date < 20) {
+        else if (date < 20)
             dateStr = "十" + num[date % 10] + "日";
-        } else {
+        else
             dateStr = num[date / 10] + "十" + num[date % 10] + "日";
-        }
         System.out.println(yearStr + monthStr + dateStr);
     }
 }

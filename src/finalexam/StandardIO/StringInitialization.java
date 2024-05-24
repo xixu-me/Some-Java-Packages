@@ -6,13 +6,14 @@ public class StringInitialization {
     public static void main(String[] var0) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        StringBuffer sb = new StringBuffer(s);
-        sb.setCharAt(0, Character.toUpperCase(sb.charAt(0)));
-        for (int i = 1; i < s.length(); ++i)
-            if (s.charAt(i - 1) != ',' && s.charAt(i - 1) != ' ')
-                sb.setCharAt(i, Character.toLowerCase(sb.charAt(i)));
+        char[] c = s.toCharArray();
+        c[0] = Character.toUpperCase(c[0]);
+        for (int i = 1; i < c.length; i++) {
+            if (c[i - 1] != ',' && c[i - 1] != ' ')
+                c[i] = Character.toLowerCase(c[i]);
             else
-                sb.setCharAt(i, Character.toUpperCase(sb.charAt(i)));
-        System.out.println(sb);
+                c[i] = Character.toUpperCase(c[i]);
+        }
+        System.out.println(new String(c));
     }
 }

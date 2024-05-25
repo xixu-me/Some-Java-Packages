@@ -20,14 +20,24 @@ public class DateFormatOutput {
         yearStr += "年";
         if (month < 10)
             monthStr = num[month] + "月";
+        else if (month == 10)
+            monthStr = "十月";
         else
             monthStr = "十" + num[month % 10] + "月";
         if (date < 10)
             dateStr = num[date] + "日";
+        else if (date == 10)
+            dateStr = "十日";
         else if (date < 20)
             dateStr = "十" + num[date % 10] + "日";
+        else if (date == 20)
+            dateStr = "二十日";
+        else if (date < 30)
+            dateStr = "二十" + num[date % 10] + "日";
+        else if (date == 30)
+            dateStr = "三十日";
         else
-            dateStr = num[date / 10] + "十" + num[date % 10] + "日";
+            dateStr = "三十" + num[date % 10] + "日";
         System.out.println(yearStr + monthStr + dateStr);
     }
 }

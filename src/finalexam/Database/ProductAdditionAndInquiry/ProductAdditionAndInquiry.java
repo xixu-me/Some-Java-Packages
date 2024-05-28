@@ -1,3 +1,5 @@
+package finalexam.Database.ProductAdditionAndInquiry;
+
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;

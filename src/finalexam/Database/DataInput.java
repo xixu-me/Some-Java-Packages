@@ -29,10 +29,10 @@ public class DataInput {
         System.out.println("3、返回主菜单");
         System.out.print("请选择（1-3）：");
         int choice = sc.nextInt();
-        int cnt = 0;
+        int count;
         switch (choice) {
             case 1:
-                cnt = 0;
+                count = 0;
                 Workbook workbook = Workbook.getWorkbook(new File("商品信息.xls"));
                 Sheet sheet = workbook.getSheet(0);
                 for (int i = 0; i < sheet.getRows(); i++) {
@@ -49,14 +49,14 @@ public class DataInput {
                         pstmt.setDouble(3, Double.parseDouble(cells[2].getContents()));
                         pstmt.setString(4, cells[3].getContents());
                         pstmt.executeUpdate();
-                        cnt++;
+                        count++;
                     }
                 }
-                System.out.println("成功从excel文件导入" + cnt + "条商品数据");
+                System.out.println("成功从excel文件导入" + count + "条商品数据");
                 workbook.close();
                 break;
             case 2:
-                cnt = 0;
+                count = 0;
                 BufferedReader reader = new BufferedReader(new FileReader("商品信息.txt"));
                 reader.readLine();
                 String line;
@@ -74,11 +74,11 @@ public class DataInput {
                         pstmt.setDouble(3, Double.parseDouble(data[2]));
                         pstmt.setString(4, data[3]);
                         pstmt.executeUpdate();
-                        cnt++;
+                        count++;
                     }
                 }
                 reader.close();
-                System.out.println("成功从文本文件导入" + cnt + "条商品数据");
+                System.out.println("成功从文本文件导入" + count + "条商品数据");
                 break;
             case 3:
                 break;

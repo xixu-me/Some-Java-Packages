@@ -58,15 +58,17 @@ public class DataOutput {
                 bw.write("条码\t名称\t单价\t供应商\n");
                 pstmt = conn.prepareStatement("SELECT * FROM t_shangping");
                 rs = pstmt.executeQuery();
+                int count = 0;
                 while (rs.next()) {
                     bw.write(rs.getString("tiaoma") + "\t");
                     bw.write(rs.getString("mingcheng") + "\t");
                     bw.write(rs.getString("danjia") + "\t");
                     bw.write(rs.getString("gongyingshang") + "\n");
+                    count++;
                 }
                 bw.close();
                 fw.close();
-                System.out.println("成功导出XXX条商品数据到txt中");
+                System.out.println("成功导出" + count + "条商品数据到文本文件中");
                 break;
             case 3:
                 break;

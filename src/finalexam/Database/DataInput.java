@@ -60,7 +60,7 @@ public class DataInput {
                 BufferedReader reader = new BufferedReader(new FileReader("商品信息.txt"));
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    String[] data = line.split(",");
+                    String[] data = line.split("\t");
                     String tiaoma = data[0];
                     pstmt = conn.prepareStatement("SELECT COUNT(*) FROM t_shangping WHERE tiaoma = ?");
                     pstmt.setString(1, tiaoma);

@@ -58,6 +58,7 @@ public class DataInput {
             case 2:
                 cnt = 0;
                 BufferedReader reader = new BufferedReader(new FileReader("商品信息.txt"));
+                reader.readLine();
                 String line;
                 while ((line = reader.readLine()) != null) {
                     String[] data = line.split("\t");

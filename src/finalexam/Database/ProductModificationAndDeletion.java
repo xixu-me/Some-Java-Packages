@@ -31,9 +31,9 @@ public class ProductModificationAndDeletion {
                     pstmt = conn.prepareStatement("SELECT * FROM t_shangping WHERE tiaoma = ?");
                     pstmt.setString(1, codeToDelete);
                     rs = pstmt.executeQuery();
-                    if (!rs.next()) {
+                    if (!rs.next())
                         System.out.println("你输入的编码不存在，请重新输入");
-                    } else {
+                    else {
                         pstmt = conn.prepareStatement("DELETE FROM t_shangping WHERE tiaoma = ?");
                         pstmt.setString(1, codeToDelete);
                         pstmt.executeUpdate();
@@ -46,9 +46,9 @@ public class ProductModificationAndDeletion {
                     pstmt = conn.prepareStatement("SELECT * FROM t_shangping WHERE tiaoma = ?");
                     pstmt.setString(1, codeToModify);
                     rs = pstmt.executeQuery();
-                    if (!rs.next()) {
+                    if (!rs.next())
                         System.out.println("你输入的编码不存在，请重新输入");
-                    } else {
+                    else {
                         System.out.print("商品名称（" + rs.getString("mingcheng") + "）：");
                         String name = sc.nextLine();
                         sc.nextLine();

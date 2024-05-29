@@ -34,9 +34,8 @@ public class PermissionJudgment {
             role = rs.getString("juese");
             System.out.println("当前收银员：" + rs.getString("xingming"));
             loginSuccess = true;
-        } else {
+        } else
             System.out.println("用户名或密码不正确，请重新输入");
-        }
         if (loginSuccess) {
             int choice;
             do {
@@ -58,11 +57,10 @@ public class PermissionJudgment {
                         break;
                     case 3:
                     case 5:
-                        if ("管理员".equals(role)) {
+                        if ("管理员".equals(role))
                             System.out.println("你可以执行该操作");
-                        } else {
+                        else
                             System.out.println("很抱歉，你没有权限执行该操作");
-                        }
                         break;
                     default:
                         System.out.println("无效的选择，请重新选择（1-6）");

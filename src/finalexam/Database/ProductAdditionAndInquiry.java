@@ -17,7 +17,6 @@ public class ProductAdditionAndInquiry {
         Connection conn = DriverManager.getConnection(DBURL);
         Scanner scanner = new Scanner(System.in);
         int choice;
-
         do {
             System.out.println("===超市商品管理维护====");
             System.out.println("1、输入商品");

@@ -9,37 +9,38 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class ProductAdditionAndInquiry {
+    private static final String DBDRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String DBURL = "jdbc:mysql://localhost:3306/xiaoshou?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        Class.forName(DBDRIVER);
+        Connection conn = DriverManager.getConnection(DBURL);
         Scanner scanner = new Scanner(System.in);
         int choice;
-        try (Connection conn = DriverManager.getConnection(DBURL)) {
-            do {
-                System.out.println("===超市商品管理维护====");
-                System.out.println("1、输入商品");
-                System.out.println("2、查询商品");
-                System.out.println("3、退出");
-                System.out.print("请选择（1-3）：");
-                choice = scanner.nextInt();
-                scanner.nextLine();
-                switch (choice) {
-                    case 1:
-                        addProduct(scanner, conn);
-                        break;
-                    case 2:
-                        queryProduct(scanner, conn);
-                        break;
-                    case 3:
-                        System.out.println("退出系统");
-                        break;
-                    default:
-                        System.out.println("无效选择，请重新选择（1-3）：");
-                }
-            } while (choice != 3);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
+        do {
+            System.out.println("===超市商品管理维护====");
+            System.out.println("1、输入商品");
+            System.out.println("2、查询商品");
+            System.out.println("3、退出");
+            System.out.print("请选择（1-3）：");
+            choice = scanner.nextInt();
+            scanner.nextLine();
+            switch (choice) {
+                case 1:
+                    addProduct(scanner, conn);
+                    break;
+                case 2:
+                    queryProduct(scanner, conn);
+                    break;
+                case 3:
+                    System.out.println("退出系统");
+                    break;
+                default:
+                    System.out.println("无效选择，请重新选择（1-3）：");
+            }
+        } while (choice != 3);
+        conn.close();
     }
 
     private static void addProduct(Scanner scanner, Connection conn) throws SQLException {

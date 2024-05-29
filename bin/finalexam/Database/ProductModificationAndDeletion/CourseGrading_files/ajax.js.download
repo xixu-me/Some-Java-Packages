@@ -1,0 +1,81 @@
+function Sleep(obj,iMinSecond)
+{
+    if (window.eventList==null)
+        window.eventList=new Array();
+    var ind=-1;
+    for (var i=0;i<window.eventList.length;i++)
+    {
+        if (window.eventList[i]==null)
+        {
+            window.eventList[i]=obj;
+            ind=i;
+            break;
+        }
+    }
+    if (ind==-1)
+    {
+        ind=window.eventList.length;
+        window.eventList[ind]=obj;
+    }
+    setTimeout("GoOn(" + ind + ")",iMinSecond);
+}
+function GoOn(ind)
+{
+    var obj=window.eventList[ind];
+    window.eventList[ind]=null;
+    if (obj.NextStep) obj.NextStep();
+    else obj();
+}
+/* 
+[
+    {
+    "ret": "0" or "1"   
+    },
+    {    
+    "content": ""
+    }
+]
+*/
+function getshowjson(divID, url, callback) {
+    var divObj="#"+divID;
+    var bret;   
+  
+    $.getJSON(url + "&buaa=" + Math.random(), function(data) {
+           
+        $.each(data, function(entryIndex, entry) {
+                
+            if(entryIndex == 0 ) {
+                //$(divObj).empty();                   
+                   
+                if(entry['ret'] == "0") {
+                    bret = false;
+                  
+                    setTimeout("getshowjson('" + divID +"','"+ url + "'," + callback + ")", 2000);
+                } else {                  
+                    bret = true;                   
+                    callback(entry);
+                }
+               
+            } 
+            if(entryIndex > 0 ) {                                 
+                $(divObj).html(entry['content']);                
+            } 
+              
+        });
+
+    });
+}
+
+function ajaxGetURL(divID, url, callback) {
+     
+   getshowjson(divID, url, callback); 
+}
+
+
+
+function cgVoidExec(url, callback) {
+  
+    $.getJSON(url + "&buaa=" + Math.random(), function(data) {
+        callback();
+    });
+}

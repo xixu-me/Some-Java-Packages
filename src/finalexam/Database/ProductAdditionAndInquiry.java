@@ -15,7 +15,7 @@ public class ProductAdditionAndInquiry {
     public static void main(String[] args) throws Exception {
         Class.forName(DBDRIVER);
         Connection conn = DriverManager.getConnection(DBURL);
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int choice;
         do {
             System.out.println("===超市商品管理维护====");
@@ -23,14 +23,14 @@ public class ProductAdditionAndInquiry {
             System.out.println("2、查询商品");
             System.out.println("3、退出");
             System.out.print("请选择（1-3）：");
-            choice = scanner.nextInt();
-            scanner.nextLine();
+            choice = sc.nextInt();
+            sc.nextLine();
             switch (choice) {
                 case 1:
-                    addProduct(scanner, conn);
+                    addProduct(sc, conn);
                     break;
                 case 2:
-                    queryProduct(scanner, conn);
+                    queryProduct(sc, conn);
                     break;
                 case 3:
                     System.out.println("退出系统");
@@ -42,9 +42,9 @@ public class ProductAdditionAndInquiry {
         conn.close();
     }
 
-    private static void addProduct(Scanner scanner, Connection conn) throws SQLException {
+    private static void addProduct(Scanner sc, Connection conn) throws SQLException {
         System.out.print("请输入商品信息（格式：条形码，商品名称，单价，供应商）：");
-        String input = scanner.nextLine();
+        String input = sc.nextLine();
         String[] productInfo = input.split("，");
         String tiaoma = productInfo[0];
         PreparedStatement checkStmt = conn.prepareStatement("SELECT COUNT(*) FROM t_shangping WHERE tiaoma = ?");
@@ -65,9 +65,9 @@ public class ProductAdditionAndInquiry {
         System.out.println("增加成功");
     }
 
-    private static void queryProduct(Scanner scanner, Connection conn) throws SQLException {
+    private static void queryProduct(Scanner sc, Connection conn) throws SQLException {
         System.out.print("请输入查询的商品名称：");
-        String nameQuery = scanner.nextLine();
+        String nameQuery = sc.nextLine();
         PreparedStatement queryStmt = conn.prepareStatement("SELECT * FROM t_shangping WHERE mingcheng LIKE ?");
         queryStmt.setString(1, "%" + nameQuery + "%");
         ResultSet rs = queryStmt.executeQuery();

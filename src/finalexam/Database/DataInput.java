@@ -22,13 +22,13 @@ public class DataInput {
         Connection conn = DriverManager.getConnection(DBURL);
         PreparedStatement pstmt = null;
         ResultSet rs = null;
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("====超市商品管理维护====");
         System.out.println("1、从excel中导入数据");
         System.out.println("2、从文本文件导入数据");
         System.out.println("3、返回主菜单");
         System.out.print("请选择（1-3）：");
-        int choice = scanner.nextInt();
+        int choice = sc.nextInt();
         int cnt = 0;
         switch (choice) {
             case 1:

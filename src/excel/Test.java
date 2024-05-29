@@ -16,7 +16,7 @@ import jxl.write.WritableWorkbook;
 
 public class Test {
     public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         WritableWorkbook book = Workbook.createWorkbook(new File("src/excel/求职简历.xls"));
         WritableFont font = new WritableFont(WritableFont.createFont("SimSun"), 11);
         WritableCellFormat borderFormat = new WritableCellFormat(font);
@@ -52,29 +52,29 @@ public class Test {
         sheet.addCell(new Label(0, 18, "专长", borderFormat));
         sheet.setRowView(0, 520);
         System.out.println("姓名：");
-        sheet.addCell(new Label(1, 1, scanner.next(), borderFormat));
+        sheet.addCell(new Label(1, 1, sc.next(), borderFormat));
         System.out.println("性别：");
-        sheet.addCell(new Label(3, 1, scanner.next(), borderFormat));
+        sheet.addCell(new Label(3, 1, sc.next(), borderFormat));
         System.out.println("籍贯：");
-        sheet.addCell(new Label(5, 1, scanner.next(), borderFormat));
+        sheet.addCell(new Label(5, 1, sc.next(), borderFormat));
         System.out.println("出生日期：");
-        sheet.addCell(new Label(1, 2, scanner.next(), borderFormat));
+        sheet.addCell(new Label(1, 2, sc.next(), borderFormat));
         System.out.println("民族：");
-        sheet.addCell(new Label(3, 2, scanner.next(), borderFormat));
+        sheet.addCell(new Label(3, 2, sc.next(), borderFormat));
         System.out.println("邮箱：");
-        sheet.addCell(new Label(5, 2, scanner.next(), borderFormat));
+        sheet.addCell(new Label(5, 2, sc.next(), borderFormat));
         System.out.println("家庭地址：");
-        sheet.addCell(new Label(1, 3, scanner.next(), borderFormat));
+        sheet.addCell(new Label(1, 3, sc.next(), borderFormat));
         System.out.println("政治面貌：");
-        sheet.addCell(new Label(1, 4, scanner.next(), borderFormat));
+        sheet.addCell(new Label(1, 4, sc.next(), borderFormat));
         System.out.println("电话：");
-        sheet.addCell(new Label(3, 4, scanner.next(), borderFormat));
+        sheet.addCell(new Label(3, 4, sc.next(), borderFormat));
         System.out.println("专业：");
-        sheet.addCell(new Label(5, 4, scanner.next(), borderFormat));
+        sheet.addCell(new Label(5, 4, sc.next(), borderFormat));
         System.out.println("个人简介：");
-        sheet.addCell(new Label(0, 8, scanner.next(), borderFormat));
+        sheet.addCell(new Label(0, 8, sc.next(), borderFormat));
         System.out.println("特长：");
-        sheet.addCell(new Label(0, 19, scanner.next(), borderFormat));
+        sheet.addCell(new Label(0, 19, sc.next(), borderFormat));
         for (int i = 0; i <= 5; i++)
             for (int j = 5; j <= 6; j++)
                 sheet.addCell(new Label(i, j, " ", borderFormat));

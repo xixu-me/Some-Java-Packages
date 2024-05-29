@@ -17,9 +17,9 @@ public class PasswordChange {
         Connection conn = DriverManager.getConnection(DBURL);
         PreparedStatement pstmt = null;
         ResultSet rs = null;
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("请输入用户名：");
-        String username = scanner.nextLine();
+        String username = sc.nextLine();
         String checkUserSql = "SELECT xingming FROM t_yong WHERE yonghuming=?";
         pstmt = conn.prepareStatement(checkUserSql);
         pstmt.setString(1, username);
@@ -29,7 +29,7 @@ public class PasswordChange {
             return;
         }
         System.out.print("请输入当前用户的原密码：");
-        String oldPassword = scanner.nextLine();
+        String oldPassword = sc.nextLine();
         String checkPasswordSql = "SELECT xingming FROM t_yong WHERE yonghuming=? AND mima=MD5(?)";
         pstmt = conn.prepareStatement(checkPasswordSql);
         pstmt.setString(1, username);
@@ -42,14 +42,14 @@ public class PasswordChange {
         String newPassword;
         while (true) {
             System.out.print("请设置新的密码：");
-            newPassword = scanner.nextLine();
+            newPassword = sc.nextLine();
             if (!isPasswordComplex(newPassword))
                 System.out.println("您的密码不符合复杂性要求（密码长度不少于6个字符，至少有一个小写字母，至少有一个大写字母，至少一个数字），请重新输入：");
             else
                 break;
         }
         System.out.print("请输入确认密码：");
-        String confirmPassword = scanner.nextLine();
+        String confirmPassword = sc.nextLine();
         if (!newPassword.equals(confirmPassword)) {
             System.out.println("两次输入的密码必须一致，请重新输入确认密码：");
             return;

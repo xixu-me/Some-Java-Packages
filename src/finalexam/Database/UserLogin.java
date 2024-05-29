@@ -17,15 +17,15 @@ public class UserLogin {
         Connection conn = DriverManager.getConnection(DBURL);
         PreparedStatement pstmt = null;
         ResultSet rs = null;
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int attempts = 0;
         boolean loginSuccess = false;
         while (attempts < 3 && !loginSuccess) {
             System.out.println("欢迎使用阳光超市收银系统，请登陆");
             System.out.print("请输入用户名: ");
-            String username = scanner.nextLine();
+            String username = sc.nextLine();
             System.out.print("请输入密码: ");
-            String password = scanner.nextLine();
+            String password = sc.nextLine();
             String sql = "SELECT xingming FROM t_yong WHERE yonghuming=? AND mima=?";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);

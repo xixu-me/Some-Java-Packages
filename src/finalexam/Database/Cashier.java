@@ -17,23 +17,23 @@ public class Cashier {
         Connection conn = DriverManager.getConnection(DBURL);
         PreparedStatement pstmt = null;
         ResultSet rs = null;
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         boolean continueCashier = true;
         int sequence = 0;
         String lastDate = "";
         while (continueCashier) {
             System.out.println("欢迎使用阳光超市收银系统");
             System.out.print("请输入商品条形码（6位数字字符）：");
-            String barcode = scanner.nextLine();
+            String barcode = sc.nextLine();
             pstmt = conn.prepareStatement("SELECT * FROM t_shangping WHERE tiaoma = ?");
             pstmt.setString(1, barcode);
             rs = pstmt.executeQuery();
             if (rs.next()) {
                 System.out.print("输入商品数量：");
-                int quantity = scanner.nextInt();
-                scanner.nextLine();
+                int quantity = sc.nextInt();
+                sc.nextLine();
                 System.out.print("请输入收银员：");
-                String cashier = scanner.nextLine();
+                String cashier = sc.nextLine();
                 String productName = rs.getString("mingcheng");
                 double price = rs.getDouble("danjia");
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -59,7 +59,7 @@ public class Cashier {
             } else
                 System.out.println("您输入的商品条形码不存在，请确认后重新输入");
             System.out.print("是否继续收银（y/n）：");
-            String choice = scanner.nextLine();
+            String choice = sc.nextLine();
             if ("n".equalsIgnoreCase(choice))
                 continueCashier = false;
         }

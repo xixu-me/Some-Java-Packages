@@ -13,7 +13,7 @@ public class UserLogin {
     static final String DBURL = "jdbc:mysql://localhost:3306/xiaoshou?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT";
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -25,9 +25,9 @@ public class UserLogin {
             while (attempts < 3 && !loginSuccess) {
                 System.out.println("欢迎使用阳光超市收银系统，请登陆");
                 System.out.print("请输入用户名: ");
-                String username = scanner.nextLine();
+                String username = sc.nextLine();
                 System.out.print("请输入密码: ");
-                String password = scanner.nextLine();
+                String password = sc.nextLine();
                 String sql = "SELECT xingming FROM t_yong WHERE yonghuming=? AND mima=?";
                 pstmt = conn.prepareStatement(sql);
                 pstmt.setString(1, username);

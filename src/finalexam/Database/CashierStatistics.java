@@ -19,14 +19,14 @@ public class CashierStatistics {
         Connection conn = DriverManager.getConnection(DBURL);
         PreparedStatement pstmt = null;
         ResultSet rs = null;
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String inputDate;
         Date saleDate = null;
         boolean validDate = false;
         while (!validDate) {
             System.out.print("请输入销售日期（yyyy-mm-dd）:");
-            inputDate = scanner.nextLine();
+            inputDate = sc.nextLine();
             try {
                 saleDate = sdf.parse(inputDate);
                 validDate = true;
@@ -61,7 +61,7 @@ public class CashierStatistics {
         String continueInput;
         do {
             System.out.print("是否继续查询（y/n）:");
-            continueInput = scanner.nextLine();
+            continueInput = sc.nextLine();
             if ("n".equalsIgnoreCase(continueInput)) {
                 System.out.println("程序成功退出");
                 break;

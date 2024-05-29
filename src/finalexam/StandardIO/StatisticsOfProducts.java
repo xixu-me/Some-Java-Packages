@@ -33,7 +33,7 @@ class Goods {
 }
 
 public class StatisticsOfProducts {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         Goods[] goods = new Goods[5];
         double sum = 0;

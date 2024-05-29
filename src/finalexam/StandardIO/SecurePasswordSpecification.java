@@ -3,7 +3,7 @@ package finalexam.StandardIO;
 import java.util.Scanner;
 
 public class SecurePasswordSpecification {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
         System.out.println(isSafePassword(s) ? "success" : "fail");

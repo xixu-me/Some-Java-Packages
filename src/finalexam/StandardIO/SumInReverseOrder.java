@@ -3,7 +3,7 @@ package finalexam.StandardIO;
 import java.util.Scanner;
 
 public class SumInReverseOrder {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         int n1 = sc.nextInt();
         int n2 = sc.nextInt();

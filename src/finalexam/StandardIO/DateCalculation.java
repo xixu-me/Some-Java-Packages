@@ -3,7 +3,7 @@ package finalexam.StandardIO;
 import java.util.Scanner;
 
 public class DateCalculation {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         String[] arr = s.split("[-]");
@@ -14,9 +14,8 @@ public class DateCalculation {
         if (isLeapYear(year))
             days[2] = 28;
         int ans = day;
-        for (int i = 1; i < month; i++) {
+        for (int i = 1; i < month; i++)
             ans += days[i];
-        }
         System.out.println(ans);
     }
 
